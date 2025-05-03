@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Download the image
+curl -s -o /tmp/youvebeenbiebered.jpg https://bieber.party/today
+
+# Set as wallpaper on all desktops
+osascript -e 'tell application "System Events" to set picture of every desktop to "/tmp/youvebeenbiebered.jpg"'

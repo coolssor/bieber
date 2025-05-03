@@ -1,0 +1,23 @@
+$img = "$env:TEMP\youvebeenbiebered.jpg"
+
+Invoke-WebRequest 'https://bieber.party/today' -OutFile $img
+
+# Always use 'Stretch' style
+$WallpaperStyle = "2"
+$TileWallpaper = "0"
+
+New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name WallpaperStyle -PropertyType String -Value $WallpaperStyle -Force
+New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name TileWallpaper -PropertyType String -Value $TileWallpaper -Force
+
+Add-Type @"
+using System;
+using System.Runtime.InteropServices;
+
+public class NativeMethods {
+    [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+    public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
+}
+"@
+
+# Apply the wallpaper
+[NativeMethods]::SystemParametersInfo(20, 0, $img, 3)

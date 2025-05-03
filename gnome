@@ -1,0 +1,2 @@
+wget -O /tmp/youvebeenbiebered.jpg "https://bieber.party/today"
+gsettings set org.gnome.desktop.background picture-uri /tmp/youvebeenbiebered.jpg

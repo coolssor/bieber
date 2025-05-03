@@ -1,0 +1,2 @@
+wget -O /tmp/youvebeenbiebered.jpg "https://bieber.party/today"
+plasma-apply-wallpaperimage /tmp/youvebeenbiebered.jpg
