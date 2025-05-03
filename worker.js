@@ -85,22 +85,22 @@ export default {
     <p>Bieber someone by using one of these commands:</p>
     <div class="script-box">
       <h2>Windows</h2>
-      <pre>iex (iwr 'https://bieber.party/windows')</pre>
+      <pre>iex (iwr 'https://get.bieber.party/windows')</pre>
       <button class="copy-button" onclick="copyToClipboard('iex (iwr \\'https://bieber.party/windows\\')')">Copy</button>
     </div>
     <div class="script-box">
       <h2>macOS</h2>
-      <pre>bash <(curl -s https://bieber.party/macos)</pre>
+      <pre>bash <(curl -s https://get.bieber.party/macos)</pre>
       <button class="copy-button" onclick="copyToClipboard('bash <(curl -s https://bieber.party/macos)')">Copy</button>
     </div>
     <div class="script-box">
       <h2>GNOME (Linux)</h2>
-      <pre>bash <(curl -s https://bieber.party/gnome)</pre>
+      <pre>bash <(curl -s https://get.bieber.party/gnome)</pre>
       <button class="copy-button" onclick="copyToClipboard('bash <(curl -s https://bieber.party/gnome)')">Copy</button>
     </div>
     <div class="script-box">
       <h2>KDE Plasma (Linux)</h2>
-      <pre>bash <(curl -s https://bieber.party/kde)</pre>
+      <pre>bash <(curl -s https://get.bieber.party/kde)</pre>
       <button class="copy-button" onclick="copyToClipboard('bash <(curl -s https://bieber.party/kde)')">Copy</button>
     </div>
     <div class="script-box">
