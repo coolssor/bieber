@@ -1,3 +1,6 @@
 name = "bieber"
 main = "worker.js"
 compatibility_date = "2025-05-03"
+routes = [
+  { pattern = "bieber.party", custom_domain = true }
+]
