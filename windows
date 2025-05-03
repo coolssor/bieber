@@ -1,11 +1,14 @@
+# Set image location variable
 $img = "$env:TEMP\youvebeenbiebered.jpg"
 
+# Download random image
 Invoke-WebRequest 'https://bieber.party/today' -OutFile $img
 
-# Always use 'Stretch' style
+# Always use Stretch style
 $WallpaperStyle = "2"
 $TileWallpaper = "0"
 
+# Set background styles
 New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name WallpaperStyle -PropertyType String -Value $WallpaperStyle -Force
 New-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name TileWallpaper -PropertyType String -Value $TileWallpaper -Force
 
@@ -19,5 +22,5 @@ public class NativeMethods {
 }
 "@
 
-# Apply the wallpaper
+# Apply background
 [NativeMethods]::SystemParametersInfo(20, 0, $img, 3)

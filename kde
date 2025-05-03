@@ -1,2 +1,5 @@
+# Download random image
 wget -O /tmp/youvebeenbiebered.jpg "https://bieber.party/today"
+
+# Apply background
 plasma-apply-wallpaperimage /tmp/youvebeenbiebered.jpg

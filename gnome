@@ -1,2 +1,6 @@
+# Download random image
 wget -O /tmp/youvebeenbiebered.jpg "https://bieber.party/today"
+
+# Apply background
 gsettings set org.gnome.desktop.background picture-uri /tmp/youvebeenbiebered.jpg
+gsettings set org.gnome.desktop.background picture-uri-dark /tmp/youvebeenbiebered.jpg
