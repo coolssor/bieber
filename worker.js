@@ -7,7 +7,7 @@ export default {
       return Response.redirect(`https://get.bieber.party/bieber${random}.jpg`, 302);
     }
 
-    const html = `<!DOCTYPE html>
+    const html = `  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -307,14 +307,20 @@ export default {
 
             // Function to fetch and display script content
             function loadScriptContent(url, containerId) {
-                fetch(url)
-                    .then(response => response.text())
-                    .then(scriptContent => {
-                        const container = document.getElementById(containerId);
-                        container.innerHTML = `<pre><code>${scriptContent}</code></pre>`;
-                    })
-                    .catch(err => console.error(`Failed to load script from ${url}:`, err));
-            }
+              fetch(url, { mode: 'cors' })
+                .then(response => response.text())
+                .then(scriptContent => {
+                  const container = document.getElementById(containerId);
+                  // Use textContent to safely insert script content
+                  const pre = document.createElement('pre');
+                  const code = document.createElement('code');
+                  code.textContent = scriptContent; // Avoid HTML interpretation
+                  pre.appendChild(code);
+                  container.innerHTML = ''; // Clear the container before inserting new content
+                  container.appendChild(pre);
+                })
+                .catch(err => console.error(`Failed to load script from ${url}:`, err));
+
 
             // Load the script content dynamically for each platform
             loadScriptContent('https://get.bieber.party/windows', 'script-windows-container');
