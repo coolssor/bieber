@@ -319,7 +319,7 @@ export default {
                   container.innerHTML = ''; // Clear the container before inserting new content
                   container.appendChild(pre);
                 })
-                .catch(err => console.error(`Failed to load script from ${url}:`, err));
+                .catch(err => console.error(`Failed to load script from ${url}: ${err}`));
 
 
             // Load the script content dynamically for each platform
