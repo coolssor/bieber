@@ -4,7 +4,7 @@ export default {
 
     if (url.pathname === '/today') {
       const random = Math.floor(Math.random() * 20) + 1; // 1–20
-      return Response.redirect(`${url.origin}/bieber${random}.jpg`, 302);
+      return Response.redirect(`https://get.bieber.party/bieber${random}.jpg`, 302);
     }
 
     const html = `<!DOCTYPE html>
