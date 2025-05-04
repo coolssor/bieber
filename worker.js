@@ -202,6 +202,66 @@ export default {
             margin-left: 10px;
             vertical-align: middle;
         }
+        /* customizable snowflake styling using image */
+        .snowflake, .snowflake .inner {
+          animation-iteration-count: infinite;
+          animation-play-state: running;
+        }
+
+        @keyframes snowflakes-fall {
+          0% { transform: translateY(0); }
+          100% { transform: translateY(110vh); }
+        }
+
+        @keyframes snowflakes-shake {
+          0%, 100% { transform: translateX(0); }
+          50% { transform: translateX(80px); }
+        }
+
+        .snowflake {
+          position: fixed;
+          top: -10%;
+          z-index: -1;
+          user-select: none;
+          pointer-events: none;
+          animation-name: snowflakes-shake;
+          animation-duration: 3s;
+          animation-timing-function: ease-in-out;
+          opacity: 50%
+        }
+
+        .snowflake .inner {
+          animation-duration: 10s;
+          animation-name: snowflakes-fall;
+          animation-timing-function: linear;
+        }
+
+        .snowflake img {
+          width: 24px; /* adjust size as needed */
+          height: 24px;
+          pointer-events: none;
+        }
+
+        .snowflake:nth-of-type(0) { left: 1%; animation-delay: 0s; }
+        .snowflake:nth-of-type(0) .inner { animation-delay: 0s; }
+        .snowflake:first-of-type { left: 10%; animation-delay: 1s; }
+        .snowflake:first-of-type .inner, .snowflake:nth-of-type(8) .inner { animation-delay: 1s; }
+        .snowflake:nth-of-type(2) { left: 20%; animation-delay: .5s; }
+        .snowflake:nth-of-type(2) .inner, .snowflake:nth-of-type(6) .inner { animation-delay: 6s; }
+        .snowflake:nth-of-type(3) { left: 30%; animation-delay: 2s; }
+        .snowflake:nth-of-type(11) .inner, .snowflake:nth-of-type(3) .inner { animation-delay: 4s; }
+        .snowflake:nth-of-type(4) { left: 40%; animation-delay: 2s; }
+        .snowflake:nth-of-type(10) .inner, .snowflake:nth-of-type(4) .inner { animation-delay: 2s; }
+        .snowflake:nth-of-type(5) { left: 50%; animation-delay: 3s; }
+        .snowflake:nth-of-type(5) .inner { animation-delay: 8s; }
+        .snowflake:nth-of-type(6) { left: 60%; animation-delay: 2s; }
+        .snowflake:nth-of-type(7) { left: 70%; animation-delay: 1s; }
+        .snowflake:nth-of-type(7) .inner { animation-delay: 2.5s; }
+        .snowflake:nth-of-type(8) { left: 80%; animation-delay: 0s; }
+        .snowflake:nth-of-type(9) { left: 90%; animation-delay: 1.5s; }
+        .snowflake:nth-of-type(9) .inner { animation-delay: 3s; }
+        .snowflake:nth-of-type(10) { left: 25%; animation-delay: 0s; }
+        .snowflake:nth-of-type(11) { left: 65%; animation-delay: 2.5s; }
     </style>
 </head>
 <body>
@@ -264,6 +324,22 @@ export default {
         </details>
 
         <p class="chromeos-note"><strong>ChromeOS:</strong> Sorry, ChromeOS is too locked down to allow this to work :(</p>
+    </div>
+
+    <!-- Bieber snow -->
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
+      <div class="snowflake"><div class="inner"><img src="https://get.bieber.party/bieberbackground.jpg" alt="Snowflake"></div></div>
     </div>
 
     <!-- Footer -->
