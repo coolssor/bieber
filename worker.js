@@ -344,8 +344,8 @@ export default {
 
     <!-- Footer -->
     <footer>
-        <p>Created by <strong>Ross Coull (coolssor)</strong></p>
-        <a href="https://github.com/coolssor/bieber" target="_blank">
+        <p>Created by <a href="https://oe.tc/" target="_blank" rel="noopener noreferrer"><strong>Ross Coull (coolssor)</strong></a></p>
+        <a href="https://github.com/coolssor/bieber" target="_blank" rel="noopener noreferrer">
             <img class="github-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png" alt="GitHub">
             GitHub Repository
         </a>
